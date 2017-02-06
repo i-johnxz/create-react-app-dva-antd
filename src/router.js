@@ -17,7 +17,7 @@ function RouterConfig({ history, app }) {
       name: 'IndexPage',
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
-          cb(null, require('./routes/IndexPage').default);
+          cb(null, require('./routes/IndexPage'));
         });
       },
     },
@@ -27,7 +27,7 @@ function RouterConfig({ history, app }) {
       getComponent(nextState, cb) {
         require.ensure([], (require) => {
           registerModel(app, require('./models/users'));
-          cb(null, require('./routes/Users').default);
+          cb(null, require('./routes/Users'));
         });
       },
     },

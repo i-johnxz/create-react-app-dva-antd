@@ -2,6 +2,7 @@ import dva from 'dva';
 import { hashHistory } from 'dva/router';
 import createLoading from 'dva-loading';
 import { message } from 'antd';
+import router from './router';
 import './index.css';
 
 const ERROR_MSG_DURATION = 3; // 3 秒
@@ -20,7 +21,7 @@ app.use(createLoading());
 // 3. Model
 // Moved to router.js
 // 4. Router
-app.router(require('./router').default);
+app.router(router);
 
 // 5. Start
 app.start('#root');

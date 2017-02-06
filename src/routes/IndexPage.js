@@ -22,3 +22,5 @@ IndexPage.propTypes = {
 };
 
 export default connect()(IndexPage);
+
+module.exports = IndexPage

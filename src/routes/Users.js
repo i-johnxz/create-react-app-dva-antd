@@ -15,3 +15,5 @@ function Users({ location }) {
 }
 
 export default connect()(Users);
+
+module.exports = Users;
